@@ -18,4 +18,4 @@ Le driver a besoin d'un profil spécifique pour Controller Editor.
 
 Dans Controller Editor :
 - File/Open
-- Choisissez le fichier [Maschine Mikro FL Studio.ncc](Maschine Mikro FL Studio.ncc) placé dans le répertoire du driver
+- Choisissez le fichier [Controller Editor Preset.ncc](Controller Editor Preset.ncc) placé dans le répertoire du driver
