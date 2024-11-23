@@ -1,0 +1,26 @@
+
+
+
+
+API Python FL Studio :
+
+https://www.image-line.com/fl-studio-learning/fl-studio-beta-online-manual/html/midi_scripting.htm#script_module_plugin
+https://github.com/MiguelGuthridge/FL-Studio-API-Stubs/tree/main/src
+
+
+MixerController :
+https://forum.image-line.com/viewtopic.php?p=1483607#p1483607
+
+Nom des fenêtres :
+midi.widMixer        => OK
+midi.widChannelRack
+midi.widPlaylist
+midi.widPianoRoll    => OK
+midi.widBrowser
+
+
+# Afficher une fenêtre
+ui.showWindow(midi.widPianoRoll)
+
+# preset suivant
+ui.next()
