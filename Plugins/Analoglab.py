@@ -28,20 +28,11 @@ class Plugin(Abstract.Plugin):
     def jog(self, jog: int, modes: int, press: bool, step: int) -> bool:
         if modes & Consts.JOG_DEFAULT:
            if step == 1:
-                # 	Specify message as: message = status + (data1 << 8) + (data2 << 16) + (port << 24)
-                #device.forwardMIDICC(16 + (data1 << 8) + (data2 << 16) + (midiPort << 24))
                 transport.globalTransport(midi.FPT_Down, 1)
-                #transport.globalTransport(midi.FPT_Enter, 1)
            else:
                 transport.globalTransport(midi.FPT_Up, 1)
-                #transport.globalTransport(midi.FPT_Enter, 1)
 
         else:
             return False
 
-        return True
-
-
-
-    def pad(self, group: int, pad: int, shift: bool, pressure: int):
         return True

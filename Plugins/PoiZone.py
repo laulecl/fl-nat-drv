@@ -10,15 +10,7 @@
 
 import Abstract
 import Consts
-import transport
-import midi
-import device
-import plugins
-import channels
 import ui
-
-
-#PORT_MIDICC_ANALOGLAB = 10
 
 
 # test de plugin...
@@ -28,24 +20,17 @@ class Plugin(Abstract.Plugin):
         return "PoiZone"
 
 
+
     def jog(self, jog: int, modes: int, press: bool, step: int) -> bool:
+        pass
         # ne fonctionne pas
         if modes & Consts.JOG_DEFAULT:
-           if step == 1:
-              paramIndex = 22
+            if step == 1:
+                ui.previous()
+            else:
+                ui.next()
 
-              value = plugins.getParamValue(paramIndex, channels.selectedChannel())
-              plugins.setParamValue(value + 1, paramIndex, channels.selectedChannel())
-              print("coucou")
-           else:
-                plugins.nextPreset(channels.selectedChannel(), False)
+        # else:
+        #     return False
 
-        else:
-            return False
-
-        return True
-
-
-
-    def pad(self, group: int, pad: int, shift: bool, pressure: int):
-        return True
+        #return True

@@ -33,7 +33,7 @@ class Router:
 
     def jog(self, jog: int, shift: bool, press: bool, step: int):
         processed = False
-        self._jogBtnPress(Consts.BTN_RESTART, press, shift)
+        self._jogBtnPress(Consts.BTN_FOLLOW, press, shift)
 
         if self.isBtnPressed(Consts.BTN_PROJECT):  # just for tests!!!
             Test.testJog(step)
@@ -116,7 +116,7 @@ class Router:
 
     def _jogBtnPress(self, btn: int, shift: bool, state: bool):
 
-        if btn == Consts.BTN_RESTART:
+        if btn == Consts.BTN_FOLLOW:
             jogMode = Consts.JOG_SHIFT
         elif btn == Consts.BTN_VOLUME and not shift:
             jogMode = Consts.JOG_VOLUME

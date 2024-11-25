@@ -11,8 +11,9 @@
 import Contexts.Interface
 import Contexts.Transport
 import Contexts.Channel
-import Contexts.Pattern
+import Contexts.Playlist
 import Contexts.Grid
+import Contexts.PianoRoll
 import Contexts.Mixer
 import Contexts.Plugin
 import Plugins.FlKeys
@@ -23,6 +24,7 @@ import Plugins.Massive
 import Plugins.Battery
 import Plugins.Analoglab
 import Plugins.PoiZone
+import Plugins.FPC
 
 
 
@@ -41,12 +43,14 @@ class Loader:
             Plugins.Battery.Plugin(router),
             Plugins.Analoglab.Plugin(router),
             Plugins.PoiZone.Plugin(router),
+            Plugins.FPC.Plugin(router),
 
             Contexts.Plugin.Context(router),
             Contexts.Grid.Context(router),
             Contexts.Channel.Context(router),
-            Contexts.Pattern.Context(router),
-            Contexts.Mixer.Context(router)
+            Contexts.Playlist.Context(router),
+            Contexts.Mixer.Context(router),
+            Contexts.PianoRoll.Context(router),
         ]
 
     def contexts(self):

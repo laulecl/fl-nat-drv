@@ -10,7 +10,6 @@
 
 import Abstract
 import Consts
-import plugins
 import channels
 import ui
 import transport
@@ -57,5 +56,6 @@ class Context(Abstract.Context):
         octave = math.ceil(pad / 12)-1
 
         self.router.note(note, octave+group-1, pressure)
+        # print('Note ',note, ', octave ',octave)
 
         return True

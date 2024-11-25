@@ -55,6 +55,9 @@ class Context(Abstract.Context):
         elif btn == Consts.BTN_STOP:
             transport.stop()
 
+        elif btn == Consts.BTN_RESTART:
+            transport.setLoopMode()
+
         else:
             return False
 

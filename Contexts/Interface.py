@@ -44,6 +44,9 @@ class Context(Abstract.Context):
         elif btn == Consts.BTN_BROWSER:  # change current window
             transport.globalTransport(midi.FPT_NextWindow, 1)
 
+        elif btn == Consts.BTN_AUTO:
+            transport.globalTransport(midi.FPT_Enter, 1)
+
         else:
             return False
 

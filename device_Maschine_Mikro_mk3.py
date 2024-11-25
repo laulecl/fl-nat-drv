@@ -64,5 +64,5 @@ def OnSysEx(event):
 
 def OnInit():
     global _mmmk3
-    print('Loaded MIDI script for Native Instruments Maschine Mikro MK3')
+    print('Loaded MIDI driver FLNatDrv for Maschine Mikro MK3')
     _mmmk3 = MaschineMikroMK3()

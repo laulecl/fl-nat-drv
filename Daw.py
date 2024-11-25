@@ -57,30 +57,31 @@ class Daw:
 
     def updateModes(self):
         wid = ui.getFocusedFormID()
-        win = ui.getFocusedFormCaption()
 
-        if wid == midi.widChannelRack and win == 'Channel rack':
-            if self.mode != Consts.MODE_CHANNEL:
-                self.changeMode(Consts.MODE_CHANNEL)
-
-        elif wid == midi.widPlaylist and win.startswith('Playlist -'):
-            if self.mode != Consts.MODE_PLAYLIST:
-                self.changeMode(Consts.MODE_PLAYLIST)
-
-        elif wid == midi.widPianoRoll and win.startswith('Piano roll -'):
-            if self.mode != Consts.MODE_PIANO_ROLL:
-                self.changeMode(Consts.MODE_PIANO_ROLL)
-
-        elif wid == midi.widMixer and win.startswith('Mixer -'):
-            if self.mode != Consts.MODE_MIXER:
-                self.changeMode(Consts.MODE_MIXER)
-
-        elif ui.getFocusedPluginName() != "":
+        if ui.getFocusedPluginName() != "":
             if self.mode != Consts.MODE_PLUGIN:
                 self.changeMode(Consts.MODE_PLUGIN)
 
+        elif wid == midi.widChannelRack:
+            if self.mode != Consts.MODE_CHANNEL:
+                self.changeMode(Consts.MODE_CHANNEL)
+
+        elif wid == midi.widPlaylist:
+            if self.mode != Consts.MODE_PLAYLIST:
+                self.changeMode(Consts.MODE_PLAYLIST)
+
+        elif wid == midi.widPianoRoll:
+            if self.mode != Consts.MODE_PIANO_ROLL:
+                self.changeMode(Consts.MODE_PIANO_ROLL)
+
+        elif wid == midi.widMixer:
+            if self.mode != Consts.MODE_MIXER:
+                self.changeMode(Consts.MODE_MIXER)
+
+
         elif self.mode != None:
             self.changeMode(None)
+
 
 
     def note(self, note: int, octave: int, pressure: int):

@@ -60,7 +60,7 @@ class MaschineMikroMK3:
                 step = -1
             self.router.jog(event.controlNum, self.shift, self.isBtnPressed(Consts.BTN_JOG), step)
 
-        elif event.controlNum == Consts.BTN_RESTART:  # BTN Restart used as SHIFT KEY
+        elif event.controlNum == Consts.BTN_FOLLOW:  # BTN Follow used as SHIFT KEY
             event.handled = True
             self.shift = event.controlVal > 0
 

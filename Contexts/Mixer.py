@@ -40,7 +40,7 @@ class Context(Abstract.Context):
                 value = value + step / 50
             mixer.setTrackVolume(index, value)
 
-        elif modes & Consts.JOG_POSITION:
+        elif modes & Consts.JOG_SWING:
             index = mixer.trackNumber()
             value = mixer.getTrackPan(index)
             if press:
